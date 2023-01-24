@@ -1,4 +1,17 @@
 <?xml version="1.0"?>
+<csp_whitelist
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Csp:etc/csp_whitelist.xsd">
+    <!-- Magento expects a "policies" node, with any number of "policy" children nodes. -->
+    <policies>
+        <!-- The id to specify here is what sets the "key" of the Content-Security-Policy header. -->
+        <policy id="script-src">
+            <values>
+              <value id="flutterwave" type="host">https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js</value>
+            </values>
+        </policy>
+    </policies>
+</csp_whitelist>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="checkout.root">
